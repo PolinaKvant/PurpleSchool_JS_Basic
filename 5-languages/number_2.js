@@ -1,15 +1,15 @@
-let language = prompt('Введите язык');
-switch (true){
-    case language === 'en':
+const language = prompt('Введите язык');
+switch (language){
+    case 'en':
         console.log('Hello');
         break;
-    case language === 'ru':
+    case 'ru':
         console.log('Привет');
         break;
-    case language === 'ko':
+    case 'ko':
         console.log('언어');
         break;
-    case language === 'ro':
+    case 'ro':
         console.log('limba');
         break;
     default:
