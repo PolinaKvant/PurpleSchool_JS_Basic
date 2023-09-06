@@ -1,11 +1,9 @@
 const arr = [1, 40, -5, 10, 0];
 function sort (arr){
-    for (elem of arr){
-        for (elem1 of arr){
-            if (arr[elem1]>arr[elem1+1] && elem1!=arr.length-1){
-                const a = arr[elem1];
-                arr[elem1]=arr[elem1+1];
-                arr[elem1+1]=a;
+    for (let i=0; i<arr.length;i++){
+        for (let j=0; j<arr.length;j++){
+            if (arr[j]>arr[j+1] && j!=arr.length-1){
+                [arr[j],arr[j+1]]=[arr[j+1],arr[j]];
             }
         }
     }
