@@ -8,13 +8,13 @@ function checkLuhnAlgorithm(cardNumber) {
   }
 
   // Преобразуем номер карты в массив цифр
-  var digits = cardNumber.split('').map(Number);
-  var sum = 0;
-  var shouldDouble = false;
+  let digits = cardNumber.split('').map(Number);
+  let sum = 0;
+  let shouldDouble = false;
 
   // Проходим по цифрам с конца
-  for (var i = digits.length - 1; i >= 0; i--) {
-    var digit = digits[i];
+  for (let i = digits.length - 1; i >= 0; i--) {
+    let digit = digits[i];
 
     if (shouldDouble) {
       // Удваиваем каждую четную цифру
@@ -35,5 +35,5 @@ function checkLuhnAlgorithm(cardNumber) {
   return sum % 10 === 0;
 }
 
-var card = '4561-2612-1234-5464';
+let card = '4561-2612-1234-5464';
 console.log(checkLuhnAlgorithm(card)); 
